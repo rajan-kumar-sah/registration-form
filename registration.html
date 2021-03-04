@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- Registration Page Of -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style_reg.css">
+    </head>
+<body>
+    <div class="container">
+        <div class="title">Registration Form</div>
+    <form action="#" onsubmit="return myfun()">
+        <div class="user-details">
+            <div class="input">
+                <span class="details required">First Name</span>
+                <input type="text" placeholder="Enter your first name" required>
+            </div>
+            <div class="input">
+                <span class="details">Last Name</span>
+                <input type="text" placeholder="Enter your last name">
+            </div>
+            <div class="input">
+                <span class="details required">Father's Name</span>
+                <input type="text" placeholder="Enter father's name" required>
+            </div>
+            <div class="input">
+                <span class="details required">Mother's Name</span>
+                <input type="text" placeholder="Enter mother's name" required>
+            </div>
+            <div class="input">
+                <span class="details required">Date of Birth</span>
+                <input type="date" required>
+            </div>
+            <div class="input gender-details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Other</span>
+                    </label>
+                </div>
+            </div>
+            <div class="input">
+                <span class="details required">Email Id</span>
+                <input type="email" required>
+            </div>
+            <div class="input">
+                <span class="details required">Mobile Number</span>
+                <input type="text" pattern="[6-9]{1}[0-9]{9}" title="Mobile number not valid" placeholder="Enter 10 digit mobile number" required>
+                <span id="messages1" style="color: red"> </span>
+            </div>
+            <div class="input">
+                <span class="details required">Set Password</span>
+                <input type="password" id="password" value="" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please includeat 1 uppercase character, 1 lowercase character, and 1 number." placeholder="Minimum 8 digit strong password" required>
+            </div>
+            <div class="input">
+                <span class="details required">Confirm Password</span>
+                <input type="text" id="cpassword" value="" placeholder="Re-Enter Password" required>
+                <span id="messages" style="color: red"> </span>
+            </div>
+            <div class="input">
+                <span class="details required">Address</span>
+                <textarea rows="5" cols="20" name="address"  placeholder="Enter full address with pincode" required></textarea>
+            </div>
+            <div class="input">
+                <span class="details required">Upload Image</span>
+                <input type="file" accept="image/*" onchange="preview_image(event)" required> <img id="output_image" class="image"/>
+            </div>
+            <div class="input drop">Highest Education
+                <select  required id="choose">
+                    <option value="" disabled selected hidden required> </option>
+                    <option value="10">10th or Equivalent</option>
+                    <option value="12">12th or Equivalent</option>
+                    <option value="graduate">Graduation or Equivalent</option>
+                    <option value="post graduate">Post Graduation or Above</option>
+                </select>
+            </div>
+            <div class="input">
+                <span class="details required">Roll Number</span>
+                <input type="text" placeholder="Higher education Roll no" required>
+            </div>
+            <div class="input">
+                <span class="details required">Percentage</span>
+                <input type="number" placeholder="Higher education %" required>
+            </div>
+            <div class="wrapper">
+                <span class="details">Skills :  </span>
+                <input type="checkbox" name="c" value="c" tabindex="1"/>C
+                <input type="checkbox" name="c++" value="c++" tabindex="2"/>C++
+                <input type="checkbox" name="java" value="java" tabindex="3"/>Java
+                <input type="checkbox" name="python" value="python" tabindex="3"/>Python
+            </div>
+        </div>
+        <div class="button">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset" >
+        </div>
+    </form>
+    </div>
+
+
+<script src="javascript.js"></script>
+</body>
+</html>
