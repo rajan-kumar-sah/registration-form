@@ -93,7 +93,7 @@ textarea{
 
 .wrapper{
     height: 45px;
-    width: 45%;
+	min-width: 45%;
     outline: none;
     border-radius: 5px;
     border: 2px solid #82E6C1;
@@ -107,6 +107,10 @@ textarea{
     display: flex;
     justify-content: space-between;
     background: white;
+}
+.wrapper input[type="checkbox"]{
+	width:15px;
+	height:15px;
 }
 
 .user-details .input .details{
@@ -180,6 +184,27 @@ form input[type="submit"], form input[type="reset"]{
     height: 50px;
     border-radius: 10px;
     font-size: 20px;
+
+}
+
+@media (max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+    form .user-details .input{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .gender-details .category{
+        width: 100%;
+    }
+    .container form .user-details{
+        max-height: 800px;
+        overflow-y: scroll ;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
 
 }
 
