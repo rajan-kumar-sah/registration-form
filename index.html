@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Registration Page Of -->
+<!-- Registration Page -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,37 +7,38 @@
     <title>Registration Form</title>
     <link rel="stylesheet" href="style.css">
     </head>
-<body>
+
     <div class="container">
         <div class="title">Registration Form</div>
-    <form action="#" onsubmit="return myfun()">
-        <div class="user-details">
-            <div class="input">
-                <span class="details required">First Name</span>
-                <input type="text" placeholder="Enter your first name" required>
+        <form action="" name="registration" onsubmit="return myfun()">
+            <div class="user-details">
+			<div class="input">
+                <span class="details required" for="firstname">First Name</span>
+                <input type="text" name="firstname" id="firstname" placeholder="John"/>
             </div>
             <div class="input">
-                <span class="details">Last Name</span>
-                <input type="text" placeholder="Enter your last name">
+                <span for="lastname">Last Name</span>
+                <input type="text" name="lastname" id="lastname" placeholder="Doe"/>
             </div>
+
             <div class="input">
                 <span class="details required">Father's Name</span>
-                <input type="text" placeholder="Enter father's name" required>
+                <input type="text"name="fathername" placeholder="Enter father's name" >
             </div>
             <div class="input">
                 <span class="details required">Mother's Name</span>
-                <input type="text" placeholder="Enter mother's name" required>
+                <input type="text" name="mothername" placeholder="Enter mother's name">
             </div>
             <div class="input">
                 <span class="details required">Date of Birth</span>
-                <input type="date" required>
+                <input type="date" name="dob">
             </div>
             <div class="input gender-details">
                 <input type="radio" name="gender" id="dot-1">
                 <input type="radio" name="gender" id="dot-2">
                 <input type="radio" name="gender" id="dot-3">
                 <span class="gender-title">Gender</span>
-                <div class="category">
+                <div class="category name="gender"">
                     <label for="dot-1">
                         <span class="dot one"></span>
                         <span class="gender">Male</span>
@@ -55,34 +56,34 @@
                 </div>
             </div>
             <div class="input">
-                <span class="details required">Email Id</span>
-                <input type="email" required>
+                <span class="details for="email"">Email Id</span>
+                <input type="email" class="email">
             </div>
             <div class="input">
                 <span class="details required">Mobile Number</span>
-                <input type="text" pattern="[6-9]{1}[0-9]{9}" title="Mobile number not valid" placeholder="Enter 10 digit mobile number" required>
-                <span id="messages1" style="color: red"> </span>
+                <input type="text" pattern="[6-9]{1}[0-9]{9}" title="Mobile number not valid" placeholder="Enter 10 digit mobile number">
+                <span id="messages1" class="mobile" style="color: red"> </span>
             </div>
             <div class="input">
                 <span class="details required">Set Password</span>
-                <input type="password" id="password" value="" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please includeat 1 uppercase character, 1 lowercase character, and 1 number." placeholder="Minimum 8 digit strong password" required>
+                <input type="password" class="password" id="password" value="" placeholder="Minimum 8 digit strong password">
             </div>
             <div class="input">
                 <span class="details required">Confirm Password</span>
-                <input type="text" id="cpassword" value="" placeholder="Re-Enter Password" required>
-                <span id="messages" style="color: red"> </span>
+                <input type="text" id="cpassword" value="" placeholder="Re-Enter Password">
+                <span id="messages" class="cpassword" style="color: red"> </span>
             </div>
             <div class="input">
                 <span class="details required">Address</span>
-                <textarea rows="5" cols="20" name="address"  placeholder="Enter full address with pincode" required></textarea>
+                <textarea rows="5" cols="20" class="address" name="address"  placeholder="Enter full address with pincode"></textarea>
             </div>
             <div class="input">
                 <span class="details required">Upload Image</span>
-                <input type="file" accept="image/*" onchange="preview_image(event)" required> <img id="output_image" class="image"/>
+                <input type="file" class="image1" accept="image/*" onchange="preview_image(event)"> <img id="output_image" class="image"/>
             </div>
             <div class="input drop">Highest Education
-                <select  required id="choose">
-                    <option value="" disabled selected hidden required> </option>
+                <select  required id="choose" class="highedu">
+                    <option value="" disabled selected hidden> </option>
                     <option value="10">10th or Equivalent</option>
                     <option value="12">12th or Equivalent</option>
                     <option value="graduate">Graduation or Equivalent</option>
@@ -91,28 +92,37 @@
             </div>
             <div class="input">
                 <span class="details required">Roll Number</span>
-                <input type="text" placeholder="Higher education Roll no" required>
+                <input type="text" class="roll" placeholder="Higher education Roll no">
             </div>
             <div class="input">
                 <span class="details required">Percentage</span>
-                <input type="number" step="0.01" placeholder="Higher education %" required>
+                <input type="number" class="percentage" step="0.01" placeholder="Higher education %">
             </div>
             <div class="input wrapper">
-                <span class="details">Languages:</span>
+                <span class="details" class="language">Languages:</span>
                 <input type="checkbox" name="c" value="c" tabindex="1"/>C
                 <input type="checkbox" name="c++" value="c++" tabindex="2"/>C++
                 <input type="checkbox" name="java" value="java" tabindex="3"/>Java
                 <input type="checkbox" name="python" value="python" tabindex="4"/>Python
             </div>
         </div>
+
         <div class="button">
                 <input type="submit" value="Register">
                 <input type="reset" value="Reset" >
         </div>
+    </div>
     </form>
     </div>
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <!-- Change the "src" attribute according to your installation path -->
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
 
 
-<script src="javascript.js"></script>
+        <script src="javascript.js"></script>
 </body>
 </html>

@@ -187,6 +187,11 @@ form input[type="submit"], form input[type="reset"]{
 
 }
 
+
+form .error {
+    color: #ff0000;
+}
+
 @media (max-width: 584px){
     .container{
         max-width: 100%;
